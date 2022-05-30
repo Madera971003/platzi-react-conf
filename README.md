@@ -45,3 +45,82 @@ npm install html-webpack-plugin html-loader --save-dev
 ```bash
 npm install babel-loader @babel/preset-react @babel/core --save-dev
 ```
+
+## Configuración de Webpack 5 con loaders y estilos
+
+### Instalación de css-loader
+
+```bash
+npm install css-loader mini-css-extract -plugin --save-dev
+```
+
+#### Configuración del proyecto con Sass
+
+Para su instalación se usa lo siguiente:
+
+```bash
+npm install --save-dev sass-loader node-sass
+```
+
+Ahora es necesario ir al archivo **webpack.config.js**, a la sección de **module.export**, después en **module** y finalmente en **rules**, se agregará en el arreglo la siguiente regla. En caso que ya exista una parecida, solo modificar lo que se desea.
+
+Verificar que al inicio del archivo **webpack.config.js** existan estas constantes:
+
+```bash
+const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+```
+
+```bash
+{
+    test: /\.scss$/,
+    loader:[
+        MiniCssExtractPlugin.loader,
+        'css-loader',
+        'sass-loader'
+    ]
+}
+```
+
+#### Configuración del proyecto con Less
+
+Para su instalación se usa lo siguiente:
+
+```bash
+npm install --save-dev lss less-loader
+``` 
+
+Siguiendo las pasos de la configuración anterior, verificar que existan las constantes ya mencionadas y agregar la siguiente regla:
+
+```bash
+{
+    test: /\.less$/,
+    loader:[
+        MiniCssExtractPlugin.loader,
+        'css-loader',
+        'less-loader'
+    ]
+}
+```
+
+#### Configuración del proyecto con Stylus
+
+Para su instalación se usa lo siguiente:
+
+```bash
+npm install --save-dev stylus stylus-loader
+```
+
+Siguiendo las pasos de la configuración para **sass**, verificar que existan las constantes ya mencionadas y agregar la siguiente regla:
+
+```bash
+{
+    test: /\.styl$/,
+    loader:[
+        MiniCssExtractPlugin.loader,
+        'css-loader',
+        'stylus-loader'
+    ]
+}
+```
