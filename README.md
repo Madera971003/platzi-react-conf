@@ -1,5 +1,16 @@
 # Configuración de entorno de React desde Cero
 
+- [Configuración de entorno de React desde Cero](#configuración-de-entorno-de-react-desde-cero)
+  - [Instalación de Webpack, Babel, Plugins y Loader](#instalación-de-webpack-babel-plugins-y-loader)
+    - [instalación de Webpack](#instalación-de-webpack)
+    - [Instalación del Loader y Plugin](#instalación-del-loader-y-plugin)
+    - [Instalación de Babel](#instalación-de-babel)
+  - [Configuración de Webpack 5 con loaders y estilos](#configuración-de-webpack-5-con-loaders-y-estilos)
+    - [Instalación de css-loader](#instalación-de-css-loader)
+      - [Configuración del proyecto con Sass](#configuración-del-proyecto-con-sass)
+      - [Configuración del proyecto con Less](#configuración-del-proyecto-con-less)
+      - [Configuración del proyecto con Stylus](#configuración-del-proyecto-con-stylus)
+
 Ubicados en la carpeta del proyecto, se ejecutará los siguientes comandos como buenas prácticas:
 
 *Este nos inicializa el pryecto con [git](https://git-scm.com/)*
